@@ -1,292 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="src/style.css">
-    <title>Digital Marketing Agency</title>
-</head>
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
     <main>
-        <section class="home d-flex flex-column flex-lg-row">
-            <div class="hero">
-                <h4 class="sub-heading">award winning</h4>
-                <h1 class="main-heading">digital marketing agency</h1>
-                <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit
-                    fringilla ac at purus, Morbi sed lacus nec risus finibus feugiat et fermentum</p>
-                <button type="button" class="btn btn-light contact-us-btn" data-mdb-ripple-color="light"
-                    data-mdb-toggle="modal" data-mdb-target="#exampleModal">CONTACT
-                    US</button>
-            </div>
-            <div class="hero-image mx-0 px-0">
-                <img src="./src/images/hero.png" alt="hero-thumb" class="img-fluid ">
-            </div>
+      <!-- Hero Section Starts Here -->
+      <section>
+        <div id="hero">
+          <div class="hero-content">
+            <h4>Award Winning</h4>
+            <h1>Digital Marketing Agency</h1>
+            <p>
+              Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+              Pellentesque vitae ante at elit fringilla ac at purus, Morbi sed
+              lacus nec risus finibus feugiat et fermentum
+            </p>
+            <button
+              data-modal-target="#modal"
+              class="btn-red"
+              data-modle
+              onclick="openPopup()"
+            >
+              Contact Us
+            </button>
+            <div class="modal" id="modal">
+              <div class="modal-header">
+                <h4>Talk to us</h4>
+                <button data-close-button class="close-button">&times;</button>
+              </div>
+              <div class="modal-body">
+                <form action="https://getform.io/f/bmdppqva" method="POST">
+                  <div class="form-floating mb-3">
+                    <input
+                      name="email"
+                      type="email"
+                      class="form-control"
+                      id="floatingInput"
+                      placeholder="name@example.com"
+                      required
+                    />
+                    <label for="floatingInput">Email address</label>
+                  </div>
 
-        </section>
-        <!-- ------------------WHAT WE DO SECTION START ------------------------ -->
-        <section class="what-we-do ">
-
-            <div class="top d-flex flex-column flex-lg-row justify-content-start">
-                <header class="header">
-                    <h5>what we do</h5>
-                    <h2 class="header">services provided for you</h2>
-                </header>
-                <p class="para pt-4">
-                    Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque vitae ante at elit
-                    fringilla ac at purus, Morbi sed lacus nec risus finibus feugiat et fermentum
-                </p>
-            </div>
-
-            <!----- CAROUSEL ------>
-            <div id="carouselExampleIndicators" class="carousel slide" data-mdb-ride="carousel">
-
-                <div class="carousel-inner">
-
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class=" col-lg-4 col-sm-12 mt-3">
-                                <img src="./src/images/carousel/1.png" class="d-block w-100" alt="what-we-do" />
-
-                            </div>
-                            <div class=" col-lg-4 col-sm-12 mt-3 hide">
-                                <img src="./src/images/carousel/2.png" class="d-block w-100" alt="what-we-do" />
-                            </div>
-                            <div class=" col-lg-4 col-sm-12 mt-3 hide">
-                                <img src="./src/images/carousel/3.png" class="d-block w-100" alt="what-we-do" />
-                            </div>
-                        </div>
+                  <div class="name-fields">
+                    <div class="form-floating">
+                      <input
+                        name="first"
+                        type="text"
+                        class="form-control"
+                        id="floatingtext"
+                        placeholder="First Name"
+                        required
+                      />
+                      <label for="floatingtext">First Name</label>
                     </div>
-
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class=" col-lg-4 col-sm-12 mt-3">
-                                <img src="./src/images/carousel/3.png" class="d-block w-100" alt="what-we-do" />
-                            </div>
-                            <div class=" col-lg-4 col-sm-12 mt-3 hide">
-                                <img src="./src/images/carousel/1.png" class="d-block w-100" alt="what-we-do" />
-                            </div>
-                            <div class=" col-lg-4 col-sm-12 mt-3 hide">
-                                <img src="./src/images/carousel/2.png" class="d-block w-100" alt="what-we-do" />
-                            </div>
-                        </div>
+                    <div class="form-floating">
+                      <input
+                        name="last"
+                        type="text"
+                        class="form-control"
+                        id="floatingtext"
+                        placeholder="Last Name"
+                        required
+                      />
+                      <label for="floatingtext">Last Name</label>
                     </div>
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class=" col-lg-4 col-sm-12 mt-3">
-                                <img src="./src/images/carousel/2.png" class="d-block w-100" alt="what-we-do" />
-                            </div>
-                            <div class=" col-lg-4 col-sm-12 mt-3 hide">
-                                <img src="./src/images/carousel/3.png" class="d-block w-100" alt="what-we-do" />
-                            </div>
-                            <div class=" col-lg-4 col-sm-12 mt-3 hide">
-                                <img src="./src/images/carousel/1.png" class="d-block w-100" alt="what-we-do" />
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="carousel-indicators mt-4 mx-0">
-                    <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-            </div>
-        </section>
-        <!--------------------- WHAT WE DO SECTION END -------->
-
-        <!--------------------- FEATURES SECTION START ---------------------------->
-        <section class="features text-center">
-            <h5>why choose us</h5>
-            <h2>why we are best</h2>
-            <div class="d-flex flex-column flex-xl-row text-start">
-                <div class="mt-5 px-4">
-                    <img src="./src/icons/features/vision.svg" alt="vision-thumb">
-                    <h3>Clarified Vision & Target</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
-                </div>
-
-                <div class="mt-5 px-4">
-                    <img src="./src/icons/features/performance.svg" alt="performance-thumb">
-                    <h3>High Performance</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
-                </div>
-
-                <div class="mt-5 px-4">
-                    <img src="./src/icons/features/security.svg" alt="security-thumb">
-                    <h3>Maintain Security</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
-                </div>
-
-                <div class="mt-5 px-4">
-                    <img src="./src/icons/features/strategy.svg" alt="strategy-thumb">
-                    <h3>Better Strategy & Quality</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- -------------------FEATURES SECTION END -------------------------------->
-
-        <!-------------------- OUR PROJECT SECTION START --------------->
-        <section class="our-project text-center">
-            <h5>our project</h5>
-            <h2>why we are best</h2>
-            <div class="our-project-container d-flex flex-column flex-xl-row mt-5 justify-content-between">
-                <div class="">
-                    <img src="./src/images/our-project/image.png" class="img-fluid preview w-100"
-                        alt="our-project-thumb">
-                </div>
-                <div class="text-start container px-0 mx-0">
-                    <div class="black clickable p-4" onclick="ourProjectClick(event)" id='image-2.png'>
-                        <h3>Genderless Kei – Japan’s Hot</h3>
-                        <p>Set to launch on the manufacturer’s new A330neo aircraft in 2017, it’s offering lots of</p>
-                    </div>
-                    <div class=" primary clickable p-4" onclick="ourProjectClick(event)" id='image.png'>
-                        <h3>Better Strategy & Quality</h3>
-                        <p>Set to launch on the manufacturer’s new A330neo aircraft in 2017, it’s offering
-                            lots of</p>
-                    </div>
-                    <div class="black clickable p-4" onclick="ourProjectClick(event)" id='image-3.png'>
-                        <h3>Genderless Kei – Japan’s Hot</h3>
-                        <p>Set to launch on the manufacturer’s new A330neo aircraft in 2017, it’s offering lots of</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-------------------- OUR PROJECT SECTION end --------------->
-
-        <! ------------COMPANY GROWTH SECTION START- --------->
-            <section class="our-growth text-center">
-                <h5>experts growths</h5>
-                <h2>our company growth</h2>
-                <div class="cards d-flex flex-column flex-xl-row justify-content-between">
-                    <div class="mt-5  growth-card p-4">
-                        <img src="./src/icons/ourGrowth/heart.svg" width="40px" height="34px" alt="heart-svg">
-                        <h6 class="mt-1">199 +</h6>
-                        <h6 class="text">Satisfied Customers</h6>
-                    </div>
-
-                    <div class="mt-5  growth-card p-4">
-                        <img src="./src/icons/ourGrowth/clock.svg" width="40px" height="34px" alt="clock-svg">
-                        <h6 class="mt-1">1591 +</h6>
-                        <h6 class="text">Days Of Operation</h6>
-                    </div>
-
-                    <div class="mt-5  growth-card p-4">
-                        <img src="./src/icons/ourGrowth/complete.svg" width="40px" height="34px" alt="complete-svg">
-                        <h6 class="mt-1">283 +</h6>
-                        <h6 class="text">Complete Project</h6>
-                    </div>
-
-
-                    <div class="mt-5  growth-card p-4">
-                        <img src="./src/icons/ourGrowth/award.svg" width="40px" height="34px" alt="award-svg">
-                        <h6 class="mt-1">75 +</h6>
-                        <h6 class="text">Win Awards</h6>
-                    </div>
-            </section>
-            <!-- ------------COMPANY GROWTH SECTION END- --------- -->
-
-            <!---------------FEEDBACK SECTION ---------------->
-            <section class="feedback text-center">
-                <h5>client's feedback</h5>
-                <h2>people say's about us !</h2>
-                <blockquote class="text-start mt-3 blockquote-quoted">
-                    <p>Jannat Tumpa The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
-                        those
-                        interested. Sections Bonorum et Malorum original.</p>
-                    <footer>
-                        <cite>JANNAT TUMPA <span class="text-muted">&nbsp;&#8211;&nbsp; COO, AMERIMAR ENTERPRISES,
-                                INC.</span></cite>
-                    </footer>
-
-                </blockquote>
-            </section>
-
-            <!---------------FEEDBACK SECTION END ---------------->
-
-
-            <!---------------FOOTER SECTION ---------------------->
-            <footer class="footer">
-                <img class="img-fluid" src="./src/images/Group 500.png" alt="logo-thumb">
-            </footer>
-
-
-    </main>
-</body>
-
-
-</html>
-
-
-
-<!-- Modal -->
-<div class="modal contact-us fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered container-fluid">
-        <div class="modal-content p-2">
-
-            <div class="modal-body p-4">
-                <form action="https://getform.io/f/d505f6ab-2e5f-4892-bd59-6c85d7cc7a93" method="POST"
-                    class="row g-3 needs-validation" novalidate onsubmit="handleSubmit(event)">
-                    <h6 class="title p-2">Talk to us</h6>
-
-                    <div class="form-outline my-4">
-
-                        <input onchange="modalInputChange(event)" type="email" id="work-email" class="form-control"
-                            name="work-email" required />
-                        <hr class="my-0 mx-2">
-                        <label class="text-muted form-label" for="email" value="">Work email*</label>
-                    </div>
-
-                    <div style="gap: 1rem;" class=" px-0  d-flex flex-column flex-lg-row justify-content-between">
-                        <div class="form-outline my-4 d-inline ">
-                            <input onchange="modalInputChange(event)" type="text" id="first-name" class="form-control"
-                                name='first-name' required />
-                            <hr class="my-0 mx-2">
-                            <label class="text-muted form-label" for="first-name">First name*</label>
-                        </div>
-                        <div class="form-outline my-4 ">
-                            <input onchange="modalInputChange(event)" type="text" id="last-name" class="form-control "
-                                name='last-name' required />
-                            <hr class="my-0 mx-2">
-                            <label class="text-muted form-label" for="last-name">Last name*</label>
-                        </div>
-                    </div>
-                    <div class="form-check my-4">
-                        <input class="form-check-input " style="margin-right: 0;" type="checkbox" id="agreement"
-                            required />
-
-                        <label class="text-muted form-check-label mx-2" for="agreement" required>I agree to Fyle's terms
-                            and
-                            conditions, and
-                            provide
-                            consent to send me communication.</label>
-                        <div class="invalid-feedback">Please agree to terms and conditions.</div>
-                    </div>
-                    <button type="submit" class="btn btn-secondary d-block w-100">
-                        Contact Us
-                    </button>
+                  </div>
+                  <div class="terms-and-conditions">
+                    <input
+                      type="checkbox"
+                      class="form-check-input margin"
+                      id="check1"
+                      required
+                    />
+                    <label for="check1"
+                      >I agree to Fyle's terms and conditions, and provide
+                      consent to send me communication.</label
+                    >
+                  </div>
+                  <button class="btn" type="submit">Contact Us</button>
                 </form>
+              </div>
             </div>
-
-
+            <div id="overlay"></div>
+          </div>
+          <img src="./img/hero.png" alt="woman in red hat" />
         </div>
-    </div>
-</div>
-<!-- MDB -->
-<script src='./src/script.js' type="text/javascript"> </script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+      </section>
+      <!-- Hero Section Ends Here -->
+
+      <!-- What we Do Starts Here -->
+      <section class="grey-bg">
+        <div id="what-we-do">
+          <div class="sec-title">
+            <h4>WHAT WE DO</h4>
+          </div>
+          <div class="sec-des">
+            <h2>
+              Services provide <br />
+              for you
+            </h2>
+            <p>
+              Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+              Pellentesque vitae ante at elit fringilla ac at purus, Morbi sed
+              lacus nec risus finibus feugiat et fermentum
+            </p>
+          </div>
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./img/1-2.png" alt="" />
+                <div class="content">
+                  <img class="content-img" src="./icons/icon.svg" alt="" />
+                  <h6>WEB DEVELOPMENT</h6>
+                  <p>
+                    Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+                    Pellentesque
+                  </p>
+                  <a href="https://www.fylehq.com/" target="_blank"
+                    ><button class="btn-white">
+                      READ MORE <img src="./icons/arrow.svg" alt="" /></button
+                  ></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/2-2.png" alt="" />
+                <div class="content">
+                  <img class="content-img" src="./icons/icon.svg" alt="" />
+                  <h6>WEB DEVELOPMENT</h6>
+                  <p>
+                    Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+                    Pellentesque
+                  </p>
+                  <a href="https://www.fylehq.com/" target="_blank"
+                    ><button class="btn-white">
+                      READ MORE <img src="./icons/arrow.svg" alt="" /></button
+                  ></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/3-2.png" alt="" />
+                <div class="content">
+                  <img class="content-img" src="./icons/icon.svg" alt="" />
+                  <h6>WEB DEVELOPMENT</h6>
+                  <p>
+                    Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+                    Pellentesque
+                  </p>
+                  <a href="https://www.fylehq.com/" target="_blank"
+                    ><button class="btn-white">
+                      READ MORE <img src="./icons/arrow.svg" alt="" /></button
+                  ></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/4-2.png" alt="" />
+                <div class="content">
+                  <img class="content-img" src="./icons/icon.svg" alt="" />
+                  <h6>WEB DEVELOPMENT</h6>
+                  <p>
+                    Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+                    Pellentesque
+                  </p>
+                  <a href="https://www.fylehq.com/" target="_blank"
+                    ><button class="btn-white">
+                      READ MORE <img src="./icons/arrow.svg" alt="" /></button
+                  ></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/1-2.png" alt="" />
+                <div class="content">
+                  <img class="content-img" src="./icons/icon.svg" alt="" />
+                  <h6>WEB DEVELOPMENT</h6>
+                  <p>
+                    Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+                    Pellentesque
+                  </p>
+                  <a href="https://www.fylehq.com/" target="_blank"
+                    ><button class="btn-white">
+                      READ MORE <img src="./icons/arrow.svg" alt="" /></button
+                  ></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/2-2.png" alt="" />
+                <div class="content">
+                  <img class="content-img" src="./icons/icon.svg" alt="" />
+                  <h6>WEB DEVELOPMENT</h6>
+                  <p>
+                    Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+                    Pellentesque
+                  </p>
+                  <a href="https://www.fylehq.com/" target="_blank"
+                    ><button class="btn-white">
+                      READ MORE <img src="./icons/arrow.svg" alt="" /></button
+                  ></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/3-2.png" alt="" />
+                <div class="content">
+                  <img class="content-img" src="./icons/icon.svg" alt="" />
+                  <h6>WEB DEVELOPMENT</h6>
+                  <p>
+                    Morbi sed lacus nec risus finibus feugiat et fermentum nibh.
+                    Pellentesque
+                  </p>
+                  <a href="https://www.fylehq.com/" target="_blank"
+                    ><button class="btn-white">
+                      READ MORE <img src="./icons/arrow.svg" alt="" /></button
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- What we Do Ends Here -->
+
+      <!-- Why Choose Us Starts Here -->
+      <section>
+        <div id="why-choose-us">
+          <h4>WHY CHOOSE US</h4>
+          <h2>Why We Are Best</h2>
+          <div class="cards">
+            <div class="card-our">
+              <img src="./icons/1-1.svg" alt="" />
+              <h5>Clarified Vision & Target</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy.
+              </p>
+            </div>
+            <div class="card-our">
+              <img src="./icons/2-1.svg" alt="" />
+              <h5>High Performance</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy.
+              </p>
+            </div>
+            <div class="card-our">
+              <img src="./icons/3-1.svg" alt="" />
+              <h5>Maintain Security</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy.
+              </p>
+            </div>
+            <div class="card-our">
+              <img src="./icons/4-1.svg" alt="" />
+              <h5>Better Strategy & Quality</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy.
+              </p>
+            </div>
+          </div>
+          <h4>Our project</h4>
+          <h2>Why We Are Best</h2>
+          <div class="image-toggler">
+            <div class="images">
+              <div class="img active">
+                <img src="./img/image.png" alt="" />
+              </div>
+              <div class="img"><img src="./img/fdr5Z7.jpg" alt="" /></div>
+              <div class="img"><img src="./img/image 6.jpg" alt="" /></div>
+            </div>
+            <div class="tabs">
+              <div class="tab active">
+                <h5>Genderless Kei – Japan’s Hot</h5>
+                <p>
+                  Set to launch on the manufacturer’s new A330neo aircraft in
+                  2017, it’s offering lots of money for this deed.
+                </p>
+              </div>
+              <div class="tab">
+                <h5>Better Strategy & Quality</h5>
+                <p>
+                  Set to launch on the manufacturer’s new A330neo aircraft in
+                  2017, it’s offering lots of money for this deed.
+                </p>
+              </div>
+              <div class="tab">
+                <h5>Genderless Kei – Japan’s Hot</h5>
+                <p>
+                  Set to launch on the manufacturer’s new A330neo aircraft in
+                  2017, it’s offering lots of money for this deed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Why Choose Us Ends Here -->
+
+      <!-- Experts growts Starts Here -->
+      <section class="grey-bg">
+        <div id="experts-growth">
+          <h4>Experts growth</h4>
+          <h2>Our Company Growth</h2>
+          <div class="growth-matrix">
+            <div class="matrix">
+              <img src="./icons/heart (2).svg" alt="" />
+              <h3>199 +</h3>
+              <p>Staticfied Customers</p>
+            </div>
+            <div class="matrix">
+              <img src="./icons/clock (3).svg" alt="" />
+              <h3>1591+</h3>
+              <p>Days Of Operation</p>
+            </div>
+            <div class="matrix">
+              <img src="./icons/Path 4402.svg" alt="" />
+              <h3>283 +</h3>
+              <p>Complete Project</p>
+            </div>
+            <div class="matrix">
+              <img src="./icons/Path 4406.svg" alt="" />
+              <h3>75+</h3>
+              <p>Win Awards</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  client's feedback start Here -->
+
+      <section>
+        <div id="feedback">
+          <h4>client's feedback</h4>
+          <h2>people say's about us !</h2>
+
+          <div class="client-feedback">
+            <p>
+              <img src="./icons/Quotemarks-left.svg" alt="" />
+              Jannat Tumpa The standard chunk of Lorem Ipsum used since the
+              1500s is reproduced below for those interested. Sections Bonorum
+              et Malorum original.
+            </p>
+            <div class="client-details">
+              <h6>JANNAT TUMPA</h6>
+              <p>- COO, AMERIMAR ENTERPRISES, INC.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <img src="./img/Group 500.png" alt="" />
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Our Js -->
+    <script src="./script.js"></script>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
